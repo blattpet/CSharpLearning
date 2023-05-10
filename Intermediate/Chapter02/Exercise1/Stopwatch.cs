@@ -2,14 +2,17 @@
 {
     public class Stopwatch
     {
+        // Fields
         private bool _isTicking;
         private DateTime _startTime;
 
+        // Constructor
         public Stopwatch()
         {
             _isTicking = false;
         }
 
+        // Method
         public void Start()
         {
             if (_isTicking)
@@ -22,6 +25,7 @@
             Console.WriteLine("Stopwatch is running");
         }
 
+        // Method
         public void Stop() 
         {
             if (!_isTicking)
