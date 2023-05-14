@@ -5,14 +5,14 @@
         public string ConnectionString { get; private set; }
         public TimeSpan Timeout { get; private set; }
 
-        public DbConnection(string ConnectionString)
+        public DbConnection(string connectionString)
         {
-            if (string.IsNullOrWhiteSpace(ConnectionString))
+            if (string.IsNullOrWhiteSpace(connectionString))
             {
                 throw new ArgumentNullException("You can't open a DbConnection with an empty connection string!");
             }
 
-            this.ConnectionString = ConnectionString;
+            ConnectionString = connectionString;
         }
 
         public abstract void OpenConnection();
